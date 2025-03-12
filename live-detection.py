@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 import cv2
-model_api_kecil = YOLO('api_kecil_model.pt')
+model_api_kecil = YOLO('best_api_kecil.pt')
 model_api_besar = YOLO('api_besar_model.pt')
 cap = cv2.VideoCapture(0)
 
@@ -8,7 +8,7 @@ while cap.isOpened():
     ret, frame = cap.read()
     if not ret:
         break
-    results = model_api_kecil(frame, imgsz=640, conf=0.5)
+    results = model_api_kecil(frame, imgsz=640, conf=0.7)
     if any(len(result.boxes) > 0 for result in results):
         label = "API KECIL"
     else:

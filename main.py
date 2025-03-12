@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import os
 
-model_api_kecil = YOLO('api_kecil_model.pt')
+model_api_kecil = YOLO('best_api_kecil.pt')
 model_api_besar = YOLO('api_besar_model.pt')
 
 
