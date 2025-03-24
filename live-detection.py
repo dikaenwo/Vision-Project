@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import cv2
-model_api_kecil = YOLO('lilin.pt')
-model_api_besar = YOLO('api_besar_model.pt')
+model_api_kecil = YOLO('lilin_ncnn_model')
+model_api_besar = YOLO('api_besar_model_ncnn_model')
 cap = cv2.VideoCapture(0)
 
 while cap.isOpened():
